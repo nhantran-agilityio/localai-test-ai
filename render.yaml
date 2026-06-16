@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: localai-test
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /readyz
+    envVars:
+      - key: PORT
+        value: 8080
