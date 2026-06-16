@@ -4,8 +4,10 @@ services:
     runtime: docker
     plan: free
     image:
-      url: localai/localai:latest-aio-cpu
+      url: localai/localai:latest-cpu
     envVars:
       - key: PORT
         value: 8080
+      - key: MODELS_PATH
+        value: /models
     healthCheckPath: /readyz
